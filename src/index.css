@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    background-color:rgb(28, 28, 28) ;
+
+}
+html,body,:root{
+height: 100%;
+}

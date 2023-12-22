@@ -2,10 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body{
-    background-color:rgb(28, 28, 28) ;
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+body{
+  background-color: #191919;
+  color: white;
+  /* overflow-y: hidden */
+}
+body,html,:root{
+  @apply h-full;
+}
+
+._container {
+  @apply w-full max-w-[1170px] md:w-[750px] lg:w-[992px] xl:w-[1170px] m-auto px-[15px];
+}
+
+.croma_logo{
+  filter: drop-shadow(5px 5px 8px whitesmoke);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Herocarousal styles */
+
+
+
+.slick-dots li button:before{
+  color: #ababab;
+  opacity: 100%;
+  /* font-size: .7rem; */
+}
+.slick-dots li.slick-active button:before{
+  color: whitesmoke;
+  opacity: 100%;
+}
+.slick-dots li{
+margin-inline: 1px;
 
 }
-html,body,:root{
-height: 100%;
+.slick-dots li button{
+  font-size: 4rem;
 }
+
+/* Categories carousel */
+
+
+/* products */
+ .products{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+ }
+ .singleproduct{
+  padding: 1rem;
+  border-radius: .5rem;
+  /* border: 1px solid white; */
+  background-color: hsl(0, 0%, 7%);
+ }

@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 
 
-const Hero = () => {
-  return (
+const MainPage = () => {
+return (
     <div>
      <Outlet />
     </div>
   );
 };
 
-export default Hero;
+export default MainPage;

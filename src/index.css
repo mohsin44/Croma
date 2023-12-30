@@ -3,28 +3,43 @@
 @tailwind utilities;
 
 
-/* *,
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+
+
+*,
 *::before,
 *::after {
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
+}
 body{
-  background-color: #191919;
-  color: white;
-  /* overflow-y: hidden */
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 100%);
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+}
+/* html,body{
+  font-family: 'Montserrat', sans-serif;
+} */
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: none;
 }
 body,html,:root{
   @apply h-full;
 }
 
-._container {
+.container {
   @apply w-full max-w-[1170px] md:w-[750px] lg:w-[992px] xl:w-[1170px] m-auto px-[15px];
 }
 
 .croma_logo{
-  filter: drop-shadow(5px 5px 8px whitesmoke);
+  filter: drop-shadow(2px 2px 3px whitesmoke);
 }
 
 .swiper {
@@ -55,16 +70,35 @@ margin-inline: 1px;
 
 /* Categories carousel */
 
+/* Custom arrow styles */
+.custom-prev-arrow,
+.custom-next-arrow {
+  color: hsl(0, 0%, 50%);
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+/* Positioning the previous arrow on the left side */
+.custom-prev-arrow {
+  margin-left: -2rem; /* Adjust the distance from the left */
+}
+
+/* Positioning the next arrow on the right side */
+.custom-next-arrow {
+  right: -2rem; /* Adjust the distance from the right */
+}
+
+
+.titles{
+  margin: 3rem 0 1rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: whitesmoke;
+}
 
 /* products */
- .products{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
- }
- .singleproduct{
-  padding: 1rem;
-  border-radius: .5rem;
-  /* border: 1px solid white; */
-  background-color: hsl(0, 0%, 7%);
- }

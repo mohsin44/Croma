@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { CustomNextArrow, CustomPrevArrow } from "../Ui/CustomArrows";
 
-const CategoriesSlider = ({ CategoriesSliderData }) => {
+const CategoriesSlider = ({ CategoriesSliderImages }) => {
   const [settings] = useState({
     infinite: false,
     speed: 500,
@@ -23,8 +23,8 @@ const CategoriesSlider = ({ CategoriesSliderData }) => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 4.6,
+          slidesToScroll: 4.6,
           rows: 2,
           arrows: false,
         },
@@ -32,8 +32,8 @@ const CategoriesSlider = ({ CategoriesSliderData }) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 4.5,
+          slidesToScroll: 4.5,
           rows: 2,
           arrows: false,
         },
@@ -41,8 +41,8 @@ const CategoriesSlider = ({ CategoriesSliderData }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4.5,
+          slidesToScroll: 4.5,
           rows: 2,
           arrows: false,
         },
@@ -52,10 +52,10 @@ const CategoriesSlider = ({ CategoriesSliderData }) => {
 
   return (
     <Slider className="catogoriesslider" {...settings}>
-      {CategoriesSliderData.map((category) => {
+      {CategoriesSliderImages.map((category) => {
         return (
-          <div key={category.title}>
-            <img src={category.path} alt="categoryslider" />
+          <div key={category.name}>
+            <img src={category.path} alt={`${category.name}image`} />
           </div>
         );
       })}

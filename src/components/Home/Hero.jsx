@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 
-const Hero = ({ CarouselSliderData }) => {
+const Hero = ({ HeroSliderImages }) => {
   const [sliderSettings] = useState({
     dots: true,
     infinite: true,
@@ -11,16 +11,16 @@ const Hero = ({ CarouselSliderData }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
   });
 
   return (
     <div>
       <Slider {...sliderSettings}>
-        {CarouselSliderData.map((image) => {
+        {HeroSliderImages.map((image) => {
           return (
-            <div key={image.title}>
+            <div key={image.name}>
               <img src={image.path} alt="sliderimages" />
             </div>
           );

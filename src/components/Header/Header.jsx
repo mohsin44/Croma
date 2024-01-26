@@ -5,22 +5,21 @@ import { MdLocationOn } from "react-icons/md";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoMdCart } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import Menu from "./menu";
+import Profile from "./Profile/Profile";
 
 const Header = () => {
   return (
     <header className="bg-black text-white flex justify-between h-20">
       {/* desktop and table version */}
 
-      <div className="w-full m-auto max-w-[1200px] px-2">
+      <div className="w-full m-auto max-w-[1200px] px-2 relative">
         <div className="hidden items-center justify-between w-full md:flex">
           <div className="p-3 flex items-center gap-12 w-4/5">
             <NavLink to="/" className="cursor-pointer w-32 min-w-[128px]">
               <img src={logo} className="croma_logo w-full" />
             </NavLink>
-            <div className="flex items-center cursor-pointer">
-              <IoMenuOutline className="text-3xl" />
-              <p className="text-xs font-semibold tracking-wide">Menu</p>
-            </div>
+            <Menu />
             <div className="flex items-center bg-white h-9 w-full max-w-md px-2 py-5 rounded-md">
               <input
                 type="text"
@@ -38,7 +37,7 @@ const Header = () => {
               <IoPencil className="text-xs" />
             </div>
             <div className=" text-2xl">
-              <BsFillPersonFill />
+              <Profile />
             </div>
             <NavLink to="cart" className=" text-2xl relative">
               <IoMdCart />
@@ -51,7 +50,7 @@ const Header = () => {
 
         {/* Mobile version */}
 
-        <div className="md:hidden">
+        <div className="md:hidden w-full ">
           <div className="flex justify-between">
             <div className="flex items-center gap-1">
               <div className="flex items-center">
@@ -63,7 +62,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-3 mr-2">
               <div className=" text-xl">
-                <BsFillPersonFill />
+                <Profile />
               </div>
               <NavLink to="cart" className="text-xl relative">
                 <IoMdCart />

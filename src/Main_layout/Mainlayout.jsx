@@ -1,11 +1,11 @@
-import Header from '../components/Main_components/Header/Header'
-import Hero from '../components/Main_components/Hero/Hero'
+import Header from '../components/Header/Header'
+import MainPage from '../Pages/MainPage'
 
 const Mainlayout = () => {
   return (
     <>
     <Header/>
-    <main><Hero /></main>
+    <main><MainPage /></main>
     <footer>Footer</footer>
     </>
   )

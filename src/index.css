@@ -2,29 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 
-/* *,
+@font-face {
+  font-family: Switzer;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/Switzer-Light.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Switzer;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Switzer-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Switzer;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Switzer-Bold.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Switzer;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Switzer-Medium.woff2) format("woff2");
+  font-display: swap;
+}
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
-body{
-  background-color: #191919;
-  color: white;
-  /* overflow-y: hidden */
+  font-family: inherit;
 }
-body,html,:root{
+body {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 100%);
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  font-family: "Switzer", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: none;
+}
+body,
+html,
+:root {
   @apply h-full;
 }
 
-._container {
+.container {
   @apply w-full max-w-[1170px] md:w-[750px] lg:w-[992px] xl:w-[1170px] m-auto px-[15px];
 }
 
-.croma_logo{
-  filter: drop-shadow(5px 5px 8px whitesmoke);
+.croma_logo {
+  filter: drop-shadow(2px 2px 3px whitesmoke);
 }
 
 .swiper {
@@ -34,37 +78,61 @@ body,html,:root{
 
 /* Herocarousal styles */
 
-
-
-.slick-dots li button:before{
+.slick-dots li button:before {
   color: #ababab;
   opacity: 100%;
   /* font-size: .7rem; */
 }
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
   color: whitesmoke;
   opacity: 100%;
 }
-.slick-dots li{
-margin-inline: 1px;
-
+.slick-dots li {
+  margin-inline: 1px;
 }
-.slick-dots li button{
+.slick-dots li button {
   font-size: 4rem;
 }
 
-/* Categories carousel */
+.productslider{
+  position: relative;
+}
 
+/* Custom arrow styles */
+.custom-prev-arrow,
+.custom-next-arrow {
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+}
+
+
+.custom-prev-arrow {
+  left: -2rem; 
+}
+
+
+.custom-next-arrow {
+  right: -2rem; 
+}
+
+.titles {
+  margin: 3rem 0 1rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  color: whitesmoke;
+}
+/* Highlights section*/
+.highlight .slick-slide > div {
+  margin: 0 15px;
+}
 
 /* products */
- .products{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
- }
- .singleproduct{
-  padding: 1rem;
-  border-radius: .5rem;
-  /* border: 1px solid white; */
-  background-color: hsl(0, 0%, 7%);
- }
+.productslider .slick-slide > div {
+  margin: 0 7.5px;
+}

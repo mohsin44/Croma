@@ -44,63 +44,60 @@ useEffect(() => {
 
   const [settings] = useState({
     infinite: false,
-    speed: 800,
-    initialSlide: 0,
+    speed: 80,
     slidesToShow: 4,
     slidesToScroll: 4,
-    lazyLoading: "ondemand",
+    // lazyLoading: "ondemand",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        initialSlide: 0,
         breakpoint: 1280,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 767,
         settings: {
+
           slidesToShow: 4.5,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 735,
         settings: {
+
           slidesToShow: 4.3,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 705,
         settings: {
+
           slidesToShow: 4.1,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 690,
         settings: {
+
           slidesToShow: 4,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 650,
         settings: {
+
           slidesToShow: 3.7,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 615,
         settings: {
           slidesToShow: 3.5,
@@ -108,47 +105,46 @@ useEffect(() => {
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 560,
         settings: {
+
           slidesToShow: 3.2,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 525,
         settings: {
+
           slidesToShow: 3,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 475,
         settings: {
+
           slidesToShow: 2.8,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 435,
         settings: {
+
           slidesToShow: 2.5,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 400,
         settings: {
+
           slidesToShow: 2.2,
           arrows: false,
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 355,
         settings: {
           slidesToShow: 2,
@@ -156,26 +152,9 @@ useEffect(() => {
         },
       },
       {
-        initialSlide: 0,
         breakpoint: 300,
         settings: {
           slidesToShow: 1.8,
-          arrows: false,
-        },
-      },
-      {
-        initialSlide: 0,
-        breakpoint: 250,
-        settings: {
-          slidesToShow: 1.5,
-          arrows: false,
-        },
-      },
-      {
-        initialSlide: 0,
-        breakpoint: 200,
-        settings: {
-          slidesToShow: 1.2,
           arrows: false,
         },
       },
@@ -183,6 +162,7 @@ useEffect(() => {
   });
   return (
     <div className="productslider">
+      {products.length > 0 ? (
       <Slider {...settings} >
         {products.map((product) => {
           const { _id, name, price, ratings, displayImage } = product;
@@ -227,6 +207,8 @@ useEffect(() => {
           );
         })}
       </Slider>
+      ):(<p>Loading...</p>
+      )}
     </div>
   );
 };

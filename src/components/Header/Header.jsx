@@ -6,7 +6,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { IoMdCart } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Menu from "./menu";
-import Profile from "./Profile/Profile";
+import Profile from "./profile/Profile";
 
 const Header = () => {
   return (

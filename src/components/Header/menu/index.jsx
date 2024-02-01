@@ -17,8 +17,7 @@ const Menu = () => {
 
         <p className="text-xs font-semibold tracking-wide">Menu</p>
       </button>
-
-      {isMenuOpen && <MenuWrapper handleClose={() => setIsMenuOpen(false)} />}
+        {isMenuOpen && <MenuWrapper handleClose= {()=>setIsMenuOpen(false)} />}
     </>
   );
 };

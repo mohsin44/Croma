@@ -44,7 +44,7 @@ useEffect(() => {
 
   const [settings] = useState({
     infinite: false,
-    speed: 80,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     // lazyLoading: "ondemand",

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Image from "../../components/Ui/Image";
 import ImagesSlider from "./ImagesSlider";
 import UpperInfo from "./UpperInfo";
 import BottomInfo from "./BottomInfo";
@@ -50,7 +49,7 @@ const ProductDetailsPage = () => {
           <ImagesSlider productDetails={productDetails}/>
           <UpperInfo productDetails={productDetails}/>
         </div>
-        <BottomInfo/>
+        <BottomInfo productDetails={productDetails}/>
        <FloatingPanel productdetails={productDetails}/>
       </div>
     </>

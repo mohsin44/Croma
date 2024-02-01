@@ -10,13 +10,14 @@ import Profile from "./profile/Profile";
 
 const Header = () => {
   return (
+    <div className="sticky top-0 left-0 right-0 z-50">
     <header className="bg-black text-white flex justify-between h-20">
       {/* desktop and table version */}
 
-      <div className="w-full m-auto max-w-[1200px] px-2 relative">
+      <div className="w-full m-auto max-w-[75rem] px-2 relative">
         <div className="hidden items-center justify-between w-full md:flex">
           <div className="p-3 flex items-center gap-12 w-4/5">
-            <NavLink to="/" className="cursor-pointer w-32 min-w-[128px]">
+            <NavLink to="/" className="cursor-pointer w-32 min-w-[8rem]">
               <img src={logo} className="croma_logo w-full" />
             </NavLink>
             <Menu />
@@ -83,6 +84,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </div>
   );
 };
 

@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react';
 import { BsStarFill } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { futureDate } from "../../lib/utils";
 
 const UpperInfo = ({ productDetails }) => {
   const { name, price, ratings, features, displayImage } = productDetails;
+
+ 
   return (
       <div className="rightSection px-[.9375rem]">
         <div className="mt-[1.25rem] md:mb-3 mb-[0.25rem]">
@@ -69,3 +71,6 @@ const UpperInfo = ({ productDetails }) => {
 };
 
 export default UpperInfo;
+
+
+

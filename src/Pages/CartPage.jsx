@@ -3,13 +3,13 @@ import CartCard from "../components/Ui/CartCard";
 
 const CartPage = () => {
   return (
-    <div className="md:grid md:grid-cols-2">
+    <div className="md:grid md:grid-cols-2 ">
       <CartCard />
       <CartCard />
       <CartCard />
       <CartCard />
 
-      <div className="mt-8 row-start-1 col-start-2 bg-[#222222] rounded-lg p-4 h-[11rem] md:mr-[2.5rem] md:sticky md:top-12 md:min-w-[18.5rem] md:mt-12 md:place-self-end ">
+      <div className="mt-8 row-start-1 col-start-2 bg-[#222222] rounded-lg p-4 h-[11rem] md:mr-[2.5rem] md:sticky md:top-24 md:min-w-[18.5rem] md:mt-12 md:place-self-end ">
         <h3 className="pb-2 font-semibold">
           Order Summary <span>(orders)</span>
         </h3>

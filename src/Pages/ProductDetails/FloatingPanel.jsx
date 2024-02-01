@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Image from '../../components/Ui/Image';
 
 const FloatingPanel = ({productdetails}) => {
-    const { name, price, displayImage } = productdetails;
+    const { name, price, displayImage,} = productdetails;
+   
   return (
     <div className="h-[4.375rem] md:px-[3.125rem] bg-[#191919] sticky bottom-0 right-0 left-0 flex items-center">
     <div className="hidden md:flex flex-1 items-center">

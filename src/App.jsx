@@ -12,6 +12,7 @@ import CartPage from "./Pages/CartPage";
 import ProductsPage from "./Pages/ProductsPage";
 import ProductDetailsPage from "./Pages/ProductDetails/ProductDetailsPage";
 import Error from "./Pages/Error";
+import { AuthProvider } from "./Providers/AuthContext";
 // import Dealsoftheday, { productsLoader } from './components/Home/Dealsoftheday'
 
 const router = createBrowserRouter(
@@ -27,7 +28,11 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return(
+  <AuthProvider>
+  <RouterProvider router={router} />
+  </AuthProvider>
+  )
 };
 
 export default App;

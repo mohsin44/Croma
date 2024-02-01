@@ -9,8 +9,12 @@ const BottomInfo = ({productDetails}) => {
       <div className="w-full p-5 drop-shadow-xl">
         <div>
           <div className="py-10 ">
-            <Accordian title='Overview' data={description} />
-            <Accordian title='Reviews' data={ratings.toFixed(2)} />
+            <Accordian title='Overview'>
+              <div dangerouslySetInnerHTML={{ __html: description }}/>
+            </Accordian>
+            <Accordian title='Reviews'>
+              <div>ratings component</div>
+            </Accordian>
           </div>
         </div>
       </div>
